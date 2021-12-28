@@ -2,7 +2,12 @@ module.exports = {
     content: ["./*.html"],
 
   theme: {
-    extend: {},
+    
+    extend: {
+      fontFamily:{
+        fancy:['Libre Baskerville', 'serif'],
+      }
+    },
   },
   plugins: [],
 }
