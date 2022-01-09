@@ -1,160 +1,202 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="vbs.css" >
-</head>
-	<title>site de commande</title>
-</head>
-<body>
-    <div id="bloc_page">
-        <header>
-            <div id="logo">
-                <h1>site de commande</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fastfood</title>
+    <link href="/style.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-orange-100 w-screen h-screen">
+
+      <!-- RAMMMMMMI  👇👇👇👇 hadi ta3 les photo sghar li rahem mzarb3in👇👇-->
+      <div
+        class="absolute right-0 h-screen w-3/6 p-6 flex justify-center items-center"
+      >
+        <img
+          class="absolute w-16 z-10 top-[5%] rotate-12"
+          src="/images/icons/004-pizza-3.png"
+        />
+        <img
+          class="absolute w-8 z-10 top-[36%] -left-10 -rotate-12"
+          src="/images/icons/015-kebab.png"
+        />
+        <img
+          class="absolute w-6 z-10 top-[85%]  -left-8 -rotate-45"
+          src="/images/icons/023-taco-3.png"
+        />
+        
+      </div>
+
+      <!-- RAMMMMMMI  👇👇👇👇 hadi hadik circle kbira, jsp ida tesslah sino nehhiha👇👇-->
+      <div
+        class="absolute right-0 h-screen w-3/6 p-6 flex justify-center items-center overflow-hidden"
+      >
+              
+        <div
+          class="-mr-[55%] z-20 rounded-full w-full aspect-square border-[50px] border-red-400"
+        ></div>
+      </div>
+
+      <!-- RAMMMMMMI  👇👇👇👇 hadi ta3 les questions👇👇-->
+      <!-- RAMMMMMMI  👇👇👇👇 neh hidden twilli visible👇👇-->
+      <div
+        class="hidden w-full p-4 flex flex-row-reverse  z-40 absolute h-screen bg-zinc-600/40"
+      >
+        <div class="w-1/2 rounded-md shadow-xl flex flex-col h-full bg-white">
+          <div class="flex flex-row-reverse">
+            <button class="p-4 text-gray-700 font-bold text-sm">X</button>
+          </div>
+          <div class="text-center border-b-4 pb-8 border-amber-100">
+            <img class="w-56 block mx-auto" src="/images/shawarma.png" />
+            <p class="text-xl mt-4 font-semibold text-zinc-800">
+              Shawarma
+              <span class="mt-2 text-yellow-600 text-xl font-semibold"
+                >5.0$</span
+              >
+            </p>
+          </div>
+
+          <div class="text-center mt-8 flex-1 flex flex-col">
+            <h3
+              class="text-2xl tracking-wide mx-auto max-w-sm font-bold text-amber-600"
+            >
+              ici vous choisissez les sauce que vous voullez mettre
+            </h3>
+            <div
+              class="mt-6 max-w-md mx-auto w-full pt-8 flex items-center justify-between flex-wrap"
+            >
+              <button
+                class="py-2 px-6 text-amber-500 border-4 border-amber-200 font-semibold text-sm rounded-lg"
+              >
+                chois 1
+              </button>
+              <button
+                class="py-2 px-6 text-amber-500 border-4 border-amber-200 font-semibold text-sm rounded-lg"
+              >
+                chois 1
+              </button>
+              <button
+                class="py-2 px-6 text-amber-500 border-4 border-amber-200 font-semibold text-sm rounded-lg"
+              >
+                chois 1
+              </button>
             </div>
-        </header>
-        <div id="banniere_img">
-            <div id="carrousel">
-                <ul>
-                    <li><img src="image1.jpg"/></li>
-                <li><img src="cactus.jpg" /></li>
-                <li><img src="lierre.jpg" /></li>
-                </ul>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="w-full z-30 relative h-full flex flex-col pl-8 py-8">
+        <div class="max-w-2xl">Hello</div>
+        <div class="flex-1 flex items-center">
+          <div class="w-1/2">
+            <h1
+              class="leading-tight text-6xl font-bold font-fancy text-zinc-900"
+            >
+            <!-- RAMMMMMMI  👇👇👇👇 animation hadik djaha main class hada raho dayerha👇👇-->
+              The best <span class="animate-ping">red</span><br />
+              Dela3 in algerie
+            </h1>
+            <h2 class="text-2xl mt-2 text-zinc-800">that meets your thirst</h2>
+            <ul class="flex space-x-10 mt-12">
+              <li class="block bg-amber-200 w-20 p-2 rounded-full">
+                <div
+                  class="w-full aspect-square bg-white rounded-full overflow-hidden p-5"
+                >
+                  <img src="./images/icons/001-pizza.png" />
+                </div>
+                <p
+                  class="pb-4 text-amber-900 mt-5 text-center text-sm font-bold"
+                >
+                  Pizza
+                </p>
+              </li>
+              <li class="block bg-white w-20 p-2 rounded-full">
+                <div
+                  class="w-full aspect-square bg-amber-100 rounded-full overflow-hidden p-5"
+                >
+                  <img src="./images/icons/016-shawarma-4.png" />
+                </div>
+                <p
+                  class="pb-4 text-amber-700 mt-5 text-center text-sm font-bold"
+                >
+                  Shawarma
+                </p>
+              </li>
+              <li class="block">
+                <button class="bg-white w-20 p-2 rounded-full">
+                  <div
+                    class="w-full aspect-square bg-amber-100 rounded-full overflow-hidden p-5"
+                  >
+                    <img src="./images/icons/020-taco.png" />
+                  </div>
+                  <p
+                    class="pb-4 text-amber-700 mt-5 text-center text-sm font-bold"
+                  >
+                    Tacos
+                  </p>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="w-1/3">
+            <div
+              class=" aspect-square max-w-lg w-full rounded-full bg-orange-600 shadow-xl relative p-10 overflow-hidden"
+            >
+              <img src="./images/shawarma.png" class="w-full h-full" />
+            </div>
+
+
+            <!-- RAMMMMMMI  👇👇👇👇 hadi ta3 lista ta3 les different chois ta3 une type de fast food👇👇-->
+            <!-- RAMMMMMMI  👇👇👇👇 neh hidden twilli visible👇👇-->
+            <div
+              class="hidden aspect-square max-w-lg w-full rounded-md bg-orange-600/10 backdrop-blur-lg relative p-10 overflow-hidden grid grid-cols-2 gap-6"
+            >
+              <div class="bg-white rounded-md shadow-xl p-4 space-y-3">
+                <img src="./images/shawarma.png" class="w-full bg-cover" />
+                <button
+                  class="rounded-full w-1/2 px-4 bg-yellow-200 mx-auto block text-yellow-600 font-bold text-lg"
+                >
+                  5$
+                </button>
+              </div>
+              <div class="bg-white rounded-md shadow-xl p-4 space-y-3">
+                <img src="./images/shawarma.png" class="w-full bg-cover" />
+                <button
+                  class="rounded-full w-1/2 px-4 bg-yellow-200 mx-auto block text-yellow-600 font-bold text-lg"
+                >
+                  5$
+                </button>
+              </div>
+              <div class="bg-white rounded-md shadow-xl p-4 space-y-3">
+                <img src="./images/shawarma.png" class="w-full bg-cover" />
+                <button
+                  class="rounded-full w-1/2 px-4 bg-yellow-200 mx-auto block text-yellow-600 font-bold text-lg"
+                >
+                  5$
+                </button>
+              </div>
+              <div class="bg-white rounded-md shadow-xl p-4 space-y-3">
+                <img src="./images/shawarma.png" class="w-full bg-cover" />
+                <button
+                  class="rounded-full w-1/2 px-4 bg-yellow-200 mx-auto block text-yellow-600 font-bold text-lg"
+                >
+                  5$
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-2xl">Hello</div>
+      </div>
     </div>
-<section>
-    <div id="nbr">
-        <input type="number" />
-    </div>
-    <div id="taille">
-        <form method="post" action="traitement.php">
-            <p> </p>
-            <h1>ici vous choisissez un la taille de votre de votre tacos</h1>
-            <input type="checkbox" name="m" id="m" /> <label for="m">m</label><br />
-            <input type="checkbox" name="xl" id="xl" /> <label for="xl">xl</label><br />
-            <input type="checkbox" name="xxl" id="xxl" /> <label for="xxl">xxl</label><br />
-
-        </form>
-    </div><br />
-    <div id="viande">
-        <p></p>
-        <h1> ici vous choisissez le type de viande </h1>
-        <form method="post" action="traitement.php">
-            <input type="checkbox" name="merguez" id="merguez" /> <label for="merguez">merguez</label><br />
-            <input type="checkbox" name="viande haché" id="viande haché" /> <label for="viande haché">viande haché</label><br />
-            <input type="checkbox" name="escalope" id="escalope" /> <label for="escalope">escalope</label><br />
-            <input type="checkbox" name="cordon bleu" id="cordon bleu" /> <label for="cordon bleu">cordon bleu</label><br />
-        </form>
-    </div><br />
-    <div id="sauce_">
-        <p></p>
-        <h1>ici vous choisissez les sauce que vous voullez mettre</h1>
-        <input type="checkbox" name="mayonaise" id="mayonaise" /> <label for="mayonaise">mayonaise</label><br />
-        <input type="checkbox" name="algerienne" id="algerienne" /> <label for="algerienne">algerienne</label><br />
-        <input type="checkbox" name="samurai" id="samurai" /> <label for="samurai">samurai</label><br />
-    </div><br />
-    <div id="suplaiment">
-        <p></p>
-        <h1>voudriez vous un suplaiment</h1>
-        <form method="post" action="traitement.php">
-            <input type="checkbox" name="fromage" id="fromage" /> <label for="fromage">fromage</label><br />
-            <input type="checkbox" name="sauce" id="sauce" /> <label for="sauce">sauce</label><br />
-            <input type="checkbox" name="m" id="fromage gratiné" /> <label for="fromage gratiné">fromage gratiné</label><br />
-        </form>
-    </div><br />
-    <div id="autre">
-        <h1>avez vous d\'autre recommendation</h1>
-        <form method="post" action="traitement.php">
-            <label for="recommendation">
-                recommendation
-            </label>
-            <textarea name="recommendation" id="recommendation" rows="10" cols="50"></textarea>
-        </form>
-    </div><br />
-    <div id="livraison">
-        <p></p>
-        <h1>voudriez vous etre livrer</h1>
-        <form method="post" action="traitement.php">
-            <input type="checkbox" name="oui" id="oui" /> <label for="oui">oui</label><br />
-            <input type="checkbox" name="non" id="non" /> <label for="non">non</label><br />
-        </form>
-    </div>
-</section>
-<footer>
-
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="jquery.color.min.js"></script>
-<script>
-  $(document).ready(function(){
- 
-var $carrousel = $('#carrousel'), // on cible le bloc du carrousel
- $img = $('#carrousel img'), // on cible les images contenues dans le carrousel
- indexImg = $img.length - 1, // on définit l'index du dernier élément
- i = 0, // on initialise un compteur
- $currentImg = $img.eq(i); // enfin, on cible l'image courante, qui possède l'index i (0 pour l'instant)
-
-$img.css('display', 'none'); // on cache les images
-$currentImg.css('display', 'block'); // on affiche seulement l'image courante
-
-$carrousel.append('<div class="controls"> <span class="prev">Precedent</span> <span class="next">Suivant</span> </div>');
-
-$('.next').click(function(){ // image suivante
-
- i++; // on incrémente le compteur
-
- if( i <= indexImg ){
-     $img.css('display', 'none'); // on cache les images
-     $currentImg = $img.eq(i); // on définit la nouvelle image
-     $currentImg.css('display', 'block'); // puis on l'affiche
- }
- else{
-     i = indexImg;
- }
-
-});
-
-$('.prev').click(function(){ // image précédente
-
- i--; // on décrémente le compteur, puis on réalise la même chose que pour la fonction "suivante"
-
- if( i >= 0 ){
-     $img.css('display', 'none');
-     $currentImg = $img.eq(i);
-     $currentImg.css('display', 'block');
- }
- else{
-     i = 0;
- }
-
-});
-
-function slideImg(){
- setTimeout(function(){ // on utilise une fonction anonyme
-                     
-     if(i < indexImg){ // si le compteur est inférieur au dernier index
-     i++; // on l'incrémente
- }
- else{ // sinon, on le remet à 0 (première image)
-     i = 0;
- }
-
- $img.css('display', 'none');
-
- $currentImg = $img.eq(i);
- $currentImg.css('display', 'block');
-
- slideImg(); // on oublie pas de relancer la fonction à la fin
-
- }, 7000); // on définit l'intervalle à 7000 millisecondes (7s)
-}
-
-slideImg(); // enfin, on lance la fonction une première fois
-
-});
-$('p').prepend('<p>vueillez cocher une case</p>')
-</script>
-</body>
+  </body>
 </html>
