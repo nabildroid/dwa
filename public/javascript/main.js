@@ -1,9 +1,11 @@
 const randomElm = $("#randomicons");
 const catElm = $("#category");
 const customizeElm = $("#customiseOrder");
+
 const itemsElm = $("#items");
 const carouselElm = $("#carousel");
-let selecetedItem ="tacos";
+
+let selecetedItem;
 let chosenFood;
 
 function renderCategories() {
@@ -22,7 +24,6 @@ function renderCategories() {
 }
 
 renderCategories();
-selectedItemChanged();
 function selectedItemChanged() {
   renderCategories();
   carouselElm.hide();
@@ -30,10 +31,10 @@ function selectedItemChanged() {
 }
 
 function renderFoodItems() {
-  itemsElm.fadeOut();
+  itemsElm.hide();
   if (!selecetedItem) return;
   itemsElm.removeClass("hidden");
-  itemsElm.fadeIn();
+  itemsElm.slideDown();
 
   console.log(selecetedItem);
   const { items } = categories.find((c) => c.text == selecetedItem);
@@ -53,5 +54,16 @@ function renderQuestionForm() {
   if (!chosenFood) return;
   customizeElm.hide();
   customizeElm.removeClass("hidden");
-  customizeElm.fadeIn();
+  customizeElm.slideDown();
+
+  const shoppingPrice = customizeElm.find("");
+  const shoppingTitle = customizeElm.find("");
+  const shoppingImage = customizeElm.find("");
+  const shoppingCommentaires = customizeElm.find("");
+  const newCommentaire = customizeElm.find("");
+}
+
+function closeChosenFood() {
+  chosenFood = undefined;
+  customizeElm.slideUp();
 }

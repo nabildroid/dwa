@@ -1,3 +1,4 @@
+
 const categories = [
   {
     icon: "./images/icons/020-taco.png",
