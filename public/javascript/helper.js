@@ -37,18 +37,52 @@ function createCategoryItem(params, onClick, isSelected = false) {
 }
 
 function createFoodItem(params, onClick) {
-  const { image, price } = params;
+  const { image, price,name } = params;
   const item = $(`
-        <div class="bg-white rounded-md shadow-xl p-4 space-y-3">
-            <img src="${image}" class="w-full bg-cover" />
-            <button
-            class="rounded-full w-1/2 px-4 bg-yellow-200 mx-auto block text-yellow-600 font-bold text-lg"
-            >
-            $${price}
-            </button>
-        </div>
+  <button class="bg-white group hover:outline-2 hover:outline-amber-600 hover:outline-offset-1 hover:outline  rounded-md aspect  shadow-xl p-2 space-y-2">
+    <div class="bg-yellow-100 p-2">
+      <img src="./images/shawarma.png" class="w-full bg-cover">
+    </div>
+
+    <div class="flex items-center text-lg px-1">
+      <p id="title" class="block " >${name}</p>
+      <div class="w-full flex items-center flex-row-reverse">
+          <p id="price"
+            class="rounded-full px-4 bg-yellow-200 block font-bold"
+          >
+          <span id="hiddenTitle" class="hidden text-base text-amber-900">${name} ・ </span>
+          <span class="text-yellow-600">
+            ${price}$
+          <span>
+          </p>
+      </div>
+    </div>
+    
+  </button>
     `);
 
-  item.find("button").click(() => onClick());
+  item.click(() => onClick());
+  const priceElm = item.find("#price");
+  const titleElm = item.find("#title");
+  const hiddenTitleElm = item.find("#hiddenTitle");
+
+  item.hover(()=>{
+    titleElm.animate({
+      width:"0%",
+    },350,()=>titleElm.hide());
+
+    priceElm.animate({
+      width:"99%",
+    },350);
+
+    hiddenTitleElm.delay(250).fadeIn(100);
+  },()=>{
+    titleElm.removeAttr('style');
+
+    priceElm.removeAttr('style');
+
+    hiddenTitleElm.hide();
+  });
+
   return item;
 }

@@ -5,17 +5,17 @@ const categories = [
     questions: ["taille", "sauce", "suplaiment"],
     items: [
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
@@ -27,17 +27,17 @@ const categories = [
     questions: ["taille", "sauce"],
     items: [
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
@@ -49,22 +49,22 @@ const categories = [
     questions: ["taille"],
     items: [
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },
       {
-        name: "tacos dela3",
+        name: "tacos",
         image: "./images/icons/020-taco.png",
         price: 15,
       },

@@ -3,7 +3,7 @@ const catElm = $("#category");
 const customizeElm = $("#customiseOrder");
 const itemsElm = $("#items");
 const carouselElm = $("#carousel");
-let selecetedItem;
+let selecetedItem ="tacos";
 let chosenFood;
 
 function renderCategories() {
@@ -22,7 +22,7 @@ function renderCategories() {
 }
 
 renderCategories();
-
+selectedItemChanged();
 function selectedItemChanged() {
   renderCategories();
   carouselElm.hide();
