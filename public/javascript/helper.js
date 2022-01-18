@@ -41,7 +41,7 @@ function createFoodItem(params, onClick) {
   const item = $(`
   <button class="bg-white group hover:outline-2 hover:outline-amber-600 hover:outline-offset-1 hover:outline  rounded-md aspect  shadow-xl p-2 space-y-2">
     <div class="bg-yellow-100 p-2">
-      <img src="./images/shawarma.png" class="w-full bg-cover">
+      <img src="${image}" class="w-full bg-cover">
     </div>
 
     <div class="flex items-center text-lg px-1">

@@ -1,12 +1,14 @@
 const randomElm = $("#randomicons");
 const catElm = $("#category");
-const customizeElm = $("#customiseOrder");
+const formuleElm = $("#customiseOrder");
 
 const itemsElm = $("#items");
 const carouselElm = $("#carousel");
 
 let selecetedItem;
 let chosenFood;
+
+let shoppingList = [];
 
 function renderCategories() {
   catElm.empty();
@@ -22,6 +24,8 @@ function renderCategories() {
     catElm.append(item);
   });
 }
+
+chargerLesCommentaires();
 
 renderCategories();
 function selectedItemChanged() {
@@ -44,26 +48,86 @@ function renderFoodItems() {
   items.forEach((item) => {
     const elm = createFoodItem(item, () => {
       chosenFood = item;
-      renderQuestionForm();
+      renderFormule();
     });
     itemsElm.append(elm);
   });
 }
 
-function renderQuestionForm() {
-  if (!chosenFood) return;
-  customizeElm.hide();
-  customizeElm.removeClass("hidden");
-  customizeElm.slideDown();
+let registred = false;
 
-  const shoppingPrice = customizeElm.find("");
-  const shoppingTitle = customizeElm.find("");
-  const shoppingImage = customizeElm.find("");
-  const shoppingCommentaires = customizeElm.find("");
-  const newCommentaire = customizeElm.find("");
+function renderFormule() {
+  if (!chosenFood) return;
+  formuleElm.hide();
+  formuleElm.removeClass("hidden");
+  formuleElm.slideDown();
+
+
+  const shoppingCard = formuleElm.find("#shopping");
+  const shoppingPrice = formuleElm.find("#price");
+  const shoppingTitle = formuleElm.find("#title");
+  const shoppingImage = formuleElm.find("#img");
+  const shoppingCommentaires = formuleElm.find("#commentaires");
+  const newCommentaire = formuleElm.find("input");
+  const submit = formuleElm.find("#submit");
+  const addMore = formuleElm.find("#addMore");
+  const command = formuleElm.find("#command");
+
+  if (shoppingList.length) {
+    shoppingCard.find("span").html(shoppingList.length);
+    shoppingCard.fadeIn();
+  } else {
+    shoppingCard.hide();
+  }
+
+  shoppingTitle.html(chosenFood.name);
+  shoppingPrice.html("$" + chosenFood.price);
+  shoppingImage.attr("src", chosenFood.image);
+
+  if(registred)return;
+  registred = true;
+  command.click(() => {
+    closeChosenFood();
+    setTimeout(()=>{
+      alert("command enregestrer!");
+    },3000);
+  });
+
+  addMore.click(() => {
+    shoppingList.push(chosenFood);
+    closeFormule();
+  });
+
+  submit.click(() => {
+    const value = newCommentaire.val();
+    if (value.trim().length > 10) {
+    }
+  });
 }
 
 function closeChosenFood() {
-  chosenFood = undefined;
-  customizeElm.slideUp();
+  closeFormule();
+  shoppingList = [];
 }
+
+function closeFormule() {
+  chosenFood = undefined;
+  formuleElm.slideUp();
+}
+
+function chargerLesCommentaires() {
+  setTimeout(function () {
+    // on lance une requête AJAX
+    $.ajax({
+      url: "charger.php",
+      type: GET,
+      success: function (html) {
+        $("#messages").prepend(html); // on veut ajouter les nouveaux messages au début du bloc #messages
+      },
+    });
+
+    chargerLesCommentaires(); // on relance la fonction
+  }, 5000); // on exécute le chargement toutes les 5 secondes
+}
+
+
