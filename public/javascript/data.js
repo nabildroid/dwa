@@ -5,22 +5,22 @@ const categories = [
     text: "burger",
     items: [
       {
-        name: "Chicken burger",
+        name: "Chicken",
         image: "./images/Moist-Chicken-Burgers.png",
         price: 4.99,
       },
       {
-        name: "Double burger",
+        name: "Double",
         image: "./images/images.png",
         price: 6.99,
       },
       {
-        name: "Salmon burger",
+        name: "Salmon",
         image: "./images/fish-burger.png",
         price: 8,
       },
       {
-        name: "Cheese burger",
+        name: "Cheese",
         image: "./images/Cheeseburger.png",
         price: 4,
       },
@@ -31,22 +31,22 @@ const categories = [
     text: "sandwitch",
     items: [
       {
-        name: "shawarma poulet",
+        name: "poulet",
         image: "./images/shawarma-poulet.png",
         price: 4.99,
       },
       {
-        name: "shawerma viande",
+        name: "viande",
         image: "./images/chawarma-viande.png",
         price: 6.50,
       },
       {
-        name: "tacos poulet",
+        name: "poulet",
         image: "./images/tacos-poulet.png",
         price: 5.50,
       },
       {
-        name: "tacos viande",
+        name: "viande",
         image: "./images/tacos-viande.png",
         price: 8,
       },
@@ -57,22 +57,22 @@ const categories = [
     text: "pizza",
     items: [
       {
-        name: "pizza poulet",
+        name: "poulet",
         image: "./images/pizza-poulet.png",
         price: 15,
       },
       {
-        name: "pizza thon",
+        name: "thon",
         image: "./images/pizza-thon.png",
         price: 15,
       },
       {
-        name: "pizza viande",
+        name: "viande",
         image: "./images/pizza-viande.png",
         price: 15,
       },
       {
-        name: "tpizza pepperoni",
+        name: "pepperoni",
         image: "./images/pizza.png",
         price: 15,
       },
