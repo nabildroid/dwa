@@ -89,7 +89,7 @@ function renderFormule() {
   command.click(() => {
     closeChosenFood();
     setTimeout(()=>{
-      alert("command enregestrer!");
+      alert("commande effectué");
     },3000);
   });
 
@@ -130,4 +130,21 @@ function chargerLesCommentaires() {
   }, 5000); // on exécute le chargement toutes les 5 secondes
 }
 
+ $(document).ready(function(){
+  $(".imgchange").delay(1500).fadeOut(2500, function(){
+    $(this).attr("src", "images/hamburger.png").fadeIn(2500, function(){
+      $(this).delay(1500).fadeOut(2500, function(){
+        $(this).attr("src", "images/pizza.png").fadeIn(2500);
+      });
+    });
+  });
+  });
 
+ $(document).ready(function(){
+$("#img").hover(function(){
+  $(this).fadeOut(300).fadeIn(300);
+});
+ });
+
+
+ 
